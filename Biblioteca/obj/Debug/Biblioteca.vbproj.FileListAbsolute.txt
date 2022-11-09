@@ -10,4 +10,5 @@ C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.vbproj.Co
 C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
 C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.xml
 C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
-C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Form1.resources
+C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Main.resources
+C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Autor.resources

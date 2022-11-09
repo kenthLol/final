@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Main
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -9,8 +9,7 @@
 
     Private Sub AutorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AutorToolStripMenuItem.Click
 
-        ' Abrir la vista:
-        ' <nombre-formulario-autor>.ShowDialog()
+        Autor.ShowDialog()
 
     End Sub
 End Class
