@@ -12,3 +12,4 @@ C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.xml
 C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
 C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Main.resources
 C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Autor.resources
+C:\Users\fontseca\Documents\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Editorial.resources
