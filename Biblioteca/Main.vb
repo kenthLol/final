@@ -16,4 +16,8 @@
     Private Sub EditorialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditorialToolStripMenuItem.Click
         Editorial.ShowDialog()
     End Sub
+
+    Private Sub LibrosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LibrosToolStripMenuItem.Click
+        Libro.ShowDialog()
+    End Sub
 End Class

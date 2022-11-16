@@ -48,6 +48,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.8\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -79,10 +83,17 @@
     <Compile Include="Autor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="conexion.vb" />
     <Compile Include="Editorial.Designer.vb">
       <DependentUpon>Editorial.vb</DependentUpon>
     </Compile>
     <Compile Include="Editorial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libro.Designer.vb">
+      <DependentUpon>Libro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Libro.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.vb">
@@ -115,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editorial.resx">
       <DependentUpon>Editorial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libro.resx">
+      <DependentUpon>Libro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
