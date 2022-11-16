@@ -27,14 +27,12 @@ Partial Class Editorial
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.ButtonBorrar = New System.Windows.Forms.Button()
         Me.ButtonSalir = New System.Windows.Forms.Button()
-        Me.TextBoxPais = New System.Windows.Forms.TextBox()
-        Me.TextBoxAutor = New System.Windows.Forms.TextBox()
+        Me.ctnombre_editorial = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre_editorial = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.pais = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ctcod_editorial = New System.Windows.Forms.TextBox()
+        Me.cbpais = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -87,19 +85,12 @@ Partial Class Editorial
         Me.ButtonSalir.Text = "Salir"
         Me.ButtonSalir.UseVisualStyleBackColor = True
         '
-        'TextBoxPais
+        'ctnombre_editorial
         '
-        Me.TextBoxPais.Location = New System.Drawing.Point(357, 42)
-        Me.TextBoxPais.Name = "TextBoxPais"
-        Me.TextBoxPais.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxPais.TabIndex = 14
-        '
-        'TextBoxAutor
-        '
-        Me.TextBoxAutor.Location = New System.Drawing.Point(22, 42)
-        Me.TextBoxAutor.Name = "TextBoxAutor"
-        Me.TextBoxAutor.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxAutor.TabIndex = 13
+        Me.ctnombre_editorial.Location = New System.Drawing.Point(22, 42)
+        Me.ctnombre_editorial.Name = "ctnombre_editorial"
+        Me.ctnombre_editorial.Size = New System.Drawing.Size(150, 20)
+        Me.ctnombre_editorial.TabIndex = 13
         '
         'Label2
         '
@@ -122,26 +113,26 @@ Partial Class Editorial
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.nombre_editorial, Me.pais})
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 147)
+        Me.DataGridView1.Location = New System.Drawing.Point(22, 155)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(485, 239)
-        Me.DataGridView1.TabIndex = 10
+        Me.DataGridView1.Size = New System.Drawing.Size(485, 230)
+        Me.DataGridView1.TabIndex = 17
         '
-        'Codigo
+        'ctcod_editorial
         '
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
+        Me.ctcod_editorial.Location = New System.Drawing.Point(190, 42)
+        Me.ctcod_editorial.Name = "ctcod_editorial"
+        Me.ctcod_editorial.Size = New System.Drawing.Size(150, 20)
+        Me.ctcod_editorial.TabIndex = 18
+        Me.ctcod_editorial.Visible = False
         '
-        'nombre_editorial
+        'cbpais
         '
-        Me.nombre_editorial.HeaderText = "NombreEditorial"
-        Me.nombre_editorial.Name = "nombre_editorial"
-        '
-        'pais
-        '
-        Me.pais.HeaderText = "País"
-        Me.pais.Name = "pais"
+        Me.cbpais.FormattingEnabled = True
+        Me.cbpais.Location = New System.Drawing.Point(357, 41)
+        Me.cbpais.Name = "cbpais"
+        Me.cbpais.Size = New System.Drawing.Size(122, 21)
+        Me.cbpais.TabIndex = 19
         '
         'Editorial
         '
@@ -149,14 +140,16 @@ Partial Class Editorial
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(529, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.cbpais)
+        Me.Controls.Add(Me.ctcod_editorial)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ButtonSalir)
-        Me.Controls.Add(Me.TextBoxPais)
-        Me.Controls.Add(Me.TextBoxAutor)
+        Me.Controls.Add(Me.ctnombre_editorial)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Editorial"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Biblioteca - Editorial"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -170,12 +163,10 @@ Partial Class Editorial
     Friend WithEvents ButtonGuardar As Button
     Friend WithEvents ButtonBorrar As Button
     Friend WithEvents ButtonSalir As Button
-    Friend WithEvents TextBoxPais As TextBox
-    Friend WithEvents TextBoxAutor As TextBox
+    Friend WithEvents ctnombre_editorial As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Codigo As DataGridViewTextBoxColumn
-    Friend WithEvents nombre_editorial As DataGridViewTextBoxColumn
-    Friend WithEvents pais As DataGridViewTextBoxColumn
+    Friend WithEvents ctcod_editorial As TextBox
+    Friend WithEvents cbpais As ComboBox
 End Class

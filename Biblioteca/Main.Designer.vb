@@ -78,13 +78,13 @@ Partial Class Main
         'CatalogoAutorToolStripMenuItem
         '
         Me.CatalogoAutorToolStripMenuItem.Name = "CatalogoAutorToolStripMenuItem"
-        Me.CatalogoAutorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CatalogoAutorToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.CatalogoAutorToolStripMenuItem.Text = "Catálogo Autor"
         '
         'CatalogoEditorialToolStripMenuItem
         '
         Me.CatalogoEditorialToolStripMenuItem.Name = "CatalogoEditorialToolStripMenuItem"
-        Me.CatalogoEditorialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CatalogoEditorialToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.CatalogoEditorialToolStripMenuItem.Text = "Catálogo Editorial"
         '
         'SalirToolStripMenuItem
