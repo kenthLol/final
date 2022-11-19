@@ -43,6 +43,14 @@ create table usuario(
 	constraint usuariopk primary key(cod_ident)
 );
 
+create table login(
+	id int auto_increment not null,
+	usuario varchar(20),
+	clave varchar(100),
+constraint loginpk primary key(id)
+);
+
+
 create table libro(
 	cod_libro     bigint(20) not null auto_increment,
 	titulo        varchar(50),
@@ -224,6 +232,15 @@ begin
 end //
 Delimiter ;
 
+-- --------------- LOGIN ---------------------------------------
+delimiter //
+drop procedure consultar_login//
+create procedure consultar_login(in pusuario varchar(20),in pclave varchar(100))
+begin
+	select * from login where usuario=pusuario and clave=md5(pclave);
+end//
+DELIMITER ;
+
 -- ------------------- REPORTES -----------------------------------
 /*  Libros por pais */
 
@@ -274,6 +291,9 @@ begin
 	WHERE p.multa > 0;
 end //
 DELIMITER ;
+
+call seleccionar_editorial();
+insert into login values(null, 'kenth', md5('1234'));
 
 Create user biblioteca@localhost identified by '123456789';
 Grant execute on biblioteca.* to biblioteca@localhost;
