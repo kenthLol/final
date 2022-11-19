@@ -42,3 +42,5 @@ C:\Users\Kenneth Lola\Documents\repos\final\Biblioteca\bin\Debug\System.Numerics
 C:\Users\Kenneth Lola\Documents\repos\final\Biblioteca\bin\Debug\MySql.Data.xml
 C:\Users\Kenneth Lola\Documents\repos\final\Biblioteca\obj\Debug\Biblioteca.exe.config
 C:\Users\Kenneth Lola\Documents\repos\final\Biblioteca\obj\Debug\Biblioteca.vbproj.CopyComplete
+C:\Users\Kenneth Lola\Documents\repos\final\Biblioteca\obj\Debug\Biblioteca.Presentacion.resources
+C:\Users\Kenneth Lola\Documents\repos\final\Biblioteca\obj\Debug\Biblioteca.Login.resources
