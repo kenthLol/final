@@ -40,6 +40,7 @@ Partial Class Autor
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(20, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(32, 13)
@@ -49,6 +50,7 @@ Partial Class Autor
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(352, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 13)
@@ -91,6 +93,7 @@ Partial Class Autor
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.ButtonNuevo)
         Me.GroupBox1.Controls.Add(Me.ButtonGuardar)
         Me.GroupBox1.Controls.Add(Me.ButtonBorrar)
@@ -138,6 +141,7 @@ Partial Class Autor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Biblioteca.My.Resources.Resources.Grade_Grey
         Me.ClientSize = New System.Drawing.Size(529, 450)
         Me.ControlBox = False
         Me.Controls.Add(Me.DataGridView1)

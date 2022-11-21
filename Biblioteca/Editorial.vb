@@ -10,7 +10,7 @@ Public Class Editorial
         'llamar a la funcion mostrardatos para visualizar los datos 
         'en el grid
         mostrardatos()
-
+        ' seleccionar_libros
         'cargar los datos del combo pais
         Dim SQL As String
         SQL = "call seleccionar_paises_editorial()"

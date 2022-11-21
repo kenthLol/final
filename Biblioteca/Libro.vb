@@ -3,9 +3,10 @@ Imports MySql.Data.MySqlClient
 
 Public Class Libro
 
-    ''Dim conexion As conexion = New conexion()
+    Dim conexion As conexion = New conexion()
     Private Sub Libro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'conexion.conectar()
+        conexion.conectar()
+        CargarEditoriales()
 
         'mostrardatos()
         'Dim SQL As String
@@ -33,5 +34,14 @@ Public Class Libro
         Me.Close()
     End Sub
 
+    Private Sub CargarEditoriales()
+        Dim sql As String
+        sql = "call seleccionar_editorial()"
+        conexion.consulta(sql)
+        Me.EditorialesList.DataSource = conexion.ds.Tables(0).Columns(0)
+    End Sub
 
+    Private Sub ButtonNuevo_Click(sender As Object, e As EventArgs) Handles ButtonNuevo.Click
+
+    End Sub
 End Class

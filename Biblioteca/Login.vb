@@ -34,4 +34,8 @@ Public Class Login
         conexion.lector.Close()
         Me.Close()
     End Sub
+
+    Private Sub ButtonConsultar_Click(sender As Object, e As EventArgs) Handles ButtonConsultar.
+        LeerLibros.ShowDialog()
+    End Sub
 End Class

@@ -42,6 +42,7 @@ Partial Class Libro
         Me.ButtonBorrar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.EditorialesList = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,6 +50,7 @@ Partial Class Libro
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(26, 234)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(33, 13)
@@ -65,6 +67,7 @@ Partial Class Libro
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(26, 266)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
@@ -82,6 +85,7 @@ Partial Class Libro
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(26, 299)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 13)
@@ -98,6 +102,7 @@ Partial Class Libro
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Location = New System.Drawing.Point(26, 330)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 13)
@@ -114,6 +119,7 @@ Partial Class Libro
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Location = New System.Drawing.Point(26, 362)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(74, 13)
@@ -130,6 +136,7 @@ Partial Class Libro
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(26, 392)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(38, 13)
@@ -146,6 +153,7 @@ Partial Class Libro
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Location = New System.Drawing.Point(26, 423)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(42, 13)
@@ -197,11 +205,12 @@ Partial Class Libro
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.ButtonNuevo)
         Me.GroupBox1.Controls.Add(Me.ButtonSalir)
         Me.GroupBox1.Controls.Add(Me.ButtonGuardar)
         Me.GroupBox1.Controls.Add(Me.ButtonBorrar)
-        Me.GroupBox1.Location = New System.Drawing.Point(361, 237)
+        Me.GroupBox1.Location = New System.Drawing.Point(523, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(149, 187)
         Me.GroupBox1.TabIndex = 27
@@ -210,18 +219,29 @@ Partial Class Libro
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(9, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(508, 201)
         Me.DataGridView1.TabIndex = 28
         '
+        'EditorialesList
+        '
+        Me.EditorialesList.FormattingEnabled = True
+        Me.EditorialesList.Location = New System.Drawing.Point(380, 221)
+        Me.EditorialesList.Name = "EditorialesList"
+        Me.EditorialesList.Size = New System.Drawing.Size(292, 95)
+        Me.EditorialesList.TabIndex = 30
+        '
         'Libro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(529, 450)
+        Me.BackgroundImage = Global.Biblioteca.My.Resources.Resources.Grade_Grey
+        Me.ClientSize = New System.Drawing.Size(780, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.EditorialesList)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ctedicion)
@@ -267,4 +287,5 @@ Partial Class Libro
     Friend WithEvents ButtonBorrar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents EditorialesList As ListBox
 End Class
