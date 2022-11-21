@@ -35,7 +35,7 @@ Public Class Login
         Me.Close()
     End Sub
 
-    Private Sub ButtonConsultar_Click(sender As Object, e As EventArgs) Handles ButtonConsultar.
+    Private Sub ButtonConsultar_Click(sender As Object, e As EventArgs) Handles ButtonConsultar.Click
         LeerLibros.ShowDialog()
     End Sub
 End Class
