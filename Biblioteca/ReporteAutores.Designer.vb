@@ -99,6 +99,7 @@ Partial Class ReporteAutores
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridAutores)
         Me.Name = "ReporteAutores"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reporte Autores"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridAutores, System.ComponentModel.ISupportInitialize).EndInit()
