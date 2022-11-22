@@ -49,4 +49,8 @@
     Private Sub CatalogoAutorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CatalogoAutorToolStripMenuItem.Click
         ReporteAutores.ShowDialog()
     End Sub
+
+    Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
+        AgregarUsuario.ShowDialog()
+    End Sub
 End Class

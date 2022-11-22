@@ -101,6 +101,7 @@ Partial Class RepoterEditoriales
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "RepoterEditoriales"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Repoter Editoriales"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridEditoriales, System.ComponentModel.ISupportInitialize).EndInit()

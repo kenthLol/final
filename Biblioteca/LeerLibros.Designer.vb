@@ -33,15 +33,15 @@ Partial Class LeerLibros
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(9, 14)
+        Me.Label1.Location = New System.Drawing.Point(624, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 25)
         Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Buscar"
+        Me.Label1.Text = "Filtrar"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 42)
+        Me.TextBox1.Location = New System.Drawing.Point(627, 37)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(225, 20)
         Me.TextBox1.TabIndex = 32
@@ -57,7 +57,7 @@ Partial Class LeerLibros
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 403)
+        Me.Button1.Location = New System.Drawing.Point(12, 30)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(141, 32)
         Me.Button1.TabIndex = 33
@@ -66,7 +66,7 @@ Partial Class LeerLibros
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(159, 403)
+        Me.Button2.Location = New System.Drawing.Point(159, 30)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(141, 32)
         Me.Button2.TabIndex = 34
@@ -77,7 +77,8 @@ Partial Class LeerLibros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(878, 449)
+        Me.BackgroundImage = Global.Biblioteca.My.Resources.Resources.Grade_Grey
+        Me.ClientSize = New System.Drawing.Size(878, 407)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -86,7 +87,7 @@ Partial Class LeerLibros
         Me.Controls.Add(Me.DataGridLibros)
         Me.Name = "LeerLibros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "LeerLibros"
+        Me.Text = "Leer Libros"
         CType(Me.DataGridLibros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -92,6 +92,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarUsuario.Designer.vb">
+      <DependentUpon>AgregarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Autor.Designer.vb">
       <DependentUpon>Autor.vb</DependentUpon>
     </Compile>
@@ -172,6 +178,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Autor.resx">
       <DependentUpon>Autor.vb</DependentUpon>
     </EmbeddedResource>
