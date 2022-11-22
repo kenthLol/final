@@ -53,4 +53,8 @@
     Private Sub UsuariosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem.Click
         AgregarUsuario.ShowDialog()
     End Sub
+
+    Private Sub UsuariosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UsuariosToolStripMenuItem1.Click
+        ReporteUsuarios.ShowDialog()
+    End Sub
 End Class
