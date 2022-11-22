@@ -43,6 +43,7 @@ Partial Class Libro
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.EditorialesList = New System.Windows.Forms.ListBox()
+        Me.ctcod_libro = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,6 +95,8 @@ Partial Class Libro
         '
         'dtpublicacion
         '
+        Me.dtpublicacion.CustomFormat = "yyyy-MM-dd"
+        Me.dtpublicacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpublicacion.Location = New System.Drawing.Point(106, 296)
         Me.dtpublicacion.Name = "dtpublicacion"
         Me.dtpublicacion.Size = New System.Drawing.Size(200, 20)
@@ -234,6 +237,14 @@ Partial Class Libro
         Me.EditorialesList.Size = New System.Drawing.Size(292, 95)
         Me.EditorialesList.TabIndex = 30
         '
+        'ctcod_libro
+        '
+        Me.ctcod_libro.Location = New System.Drawing.Point(380, 344)
+        Me.ctcod_libro.Name = "ctcod_libro"
+        Me.ctcod_libro.Size = New System.Drawing.Size(150, 20)
+        Me.ctcod_libro.TabIndex = 31
+        Me.ctcod_libro.Visible = False
+        '
         'Libro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -241,6 +252,7 @@ Partial Class Libro
         Me.BackgroundImage = Global.Biblioteca.My.Resources.Resources.Grade_Grey
         Me.ClientSize = New System.Drawing.Size(780, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ctcod_libro)
         Me.Controls.Add(Me.EditorialesList)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
@@ -288,4 +300,5 @@ Partial Class Libro
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents EditorialesList As ListBox
+    Friend WithEvents ctcod_libro As TextBox
 End Class
