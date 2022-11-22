@@ -29,22 +29,23 @@ Partial Class AgregarUsuario
         Me.ButtonGuardar = New System.Windows.Forms.Button()
         Me.ButtonBorrar = New System.Windows.Forms.Button()
         Me.ButtonSalir = New System.Windows.Forms.Button()
-        Me.TextBoxNombres = New System.Windows.Forms.TextBox()
+        Me.ctNombres = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBoxApellidos = New System.Windows.Forms.TextBox()
+        Me.ctApellidos = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBoxTel = New System.Windows.Forms.TextBox()
+        Me.ctTel = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBoxDir = New System.Windows.Forms.TextBox()
+        Me.ctDir = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBoxCentroEstudio = New System.Windows.Forms.TextBox()
+        Me.ctCentroEstudio = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBoxEstadoCivil = New System.Windows.Forms.TextBox()
+        Me.ctEstadoCivil = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.FechaNac = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBoxSexo = New System.Windows.Forms.ComboBox()
+        Me.ctCod_ident = New System.Windows.Forms.TextBox()
+        Me.cbSexo = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -115,12 +116,12 @@ Partial Class AgregarUsuario
         Me.ButtonSalir.Text = "Salir"
         Me.ButtonSalir.UseVisualStyleBackColor = True
         '
-        'TextBoxNombres
+        'ctNombres
         '
-        Me.TextBoxNombres.Location = New System.Drawing.Point(24, 37)
-        Me.TextBoxNombres.Name = "TextBoxNombres"
-        Me.TextBoxNombres.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxNombres.TabIndex = 15
+        Me.ctNombres.Location = New System.Drawing.Point(24, 37)
+        Me.ctNombres.Name = "ctNombres"
+        Me.ctNombres.Size = New System.Drawing.Size(150, 20)
+        Me.ctNombres.TabIndex = 15
         '
         'Label1
         '
@@ -132,12 +133,12 @@ Partial Class AgregarUsuario
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Nombres"
         '
-        'TextBoxApellidos
+        'ctApellidos
         '
-        Me.TextBoxApellidos.Location = New System.Drawing.Point(191, 37)
-        Me.TextBoxApellidos.Name = "TextBoxApellidos"
-        Me.TextBoxApellidos.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxApellidos.TabIndex = 22
+        Me.ctApellidos.Location = New System.Drawing.Point(191, 37)
+        Me.ctApellidos.Name = "ctApellidos"
+        Me.ctApellidos.Size = New System.Drawing.Size(150, 20)
+        Me.ctApellidos.TabIndex = 22
         '
         'Label3
         '
@@ -149,12 +150,12 @@ Partial Class AgregarUsuario
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Apellidos"
         '
-        'TextBoxTel
+        'ctTel
         '
-        Me.TextBoxTel.Location = New System.Drawing.Point(364, 37)
-        Me.TextBoxTel.Name = "TextBoxTel"
-        Me.TextBoxTel.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxTel.TabIndex = 24
+        Me.ctTel.Location = New System.Drawing.Point(364, 37)
+        Me.ctTel.Name = "ctTel"
+        Me.ctTel.Size = New System.Drawing.Size(150, 20)
+        Me.ctTel.TabIndex = 24
         '
         'Label4
         '
@@ -166,12 +167,12 @@ Partial Class AgregarUsuario
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "Teléfono"
         '
-        'TextBoxDir
+        'ctDir
         '
-        Me.TextBoxDir.Location = New System.Drawing.Point(24, 94)
-        Me.TextBoxDir.Name = "TextBoxDir"
-        Me.TextBoxDir.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxDir.TabIndex = 26
+        Me.ctDir.Location = New System.Drawing.Point(24, 94)
+        Me.ctDir.Name = "ctDir"
+        Me.ctDir.Size = New System.Drawing.Size(150, 20)
+        Me.ctDir.TabIndex = 26
         '
         'Label5
         '
@@ -203,12 +204,12 @@ Partial Class AgregarUsuario
         Me.Label7.TabIndex = 29
         Me.Label7.Text = "Sexo"
         '
-        'TextBoxCentroEstudio
+        'ctCentroEstudio
         '
-        Me.TextBoxCentroEstudio.Location = New System.Drawing.Point(191, 156)
-        Me.TextBoxCentroEstudio.Name = "TextBoxCentroEstudio"
-        Me.TextBoxCentroEstudio.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxCentroEstudio.TabIndex = 34
+        Me.ctCentroEstudio.Location = New System.Drawing.Point(191, 156)
+        Me.ctCentroEstudio.Name = "ctCentroEstudio"
+        Me.ctCentroEstudio.Size = New System.Drawing.Size(150, 20)
+        Me.ctCentroEstudio.TabIndex = 34
         '
         'Label8
         '
@@ -220,12 +221,12 @@ Partial Class AgregarUsuario
         Me.Label8.TabIndex = 33
         Me.Label8.Text = "Centro de Estudio"
         '
-        'TextBoxEstadoCivil
+        'ctEstadoCivil
         '
-        Me.TextBoxEstadoCivil.Location = New System.Drawing.Point(24, 155)
-        Me.TextBoxEstadoCivil.Name = "TextBoxEstadoCivil"
-        Me.TextBoxEstadoCivil.Size = New System.Drawing.Size(150, 20)
-        Me.TextBoxEstadoCivil.TabIndex = 32
+        Me.ctEstadoCivil.Location = New System.Drawing.Point(24, 155)
+        Me.ctEstadoCivil.Name = "ctEstadoCivil"
+        Me.ctEstadoCivil.Size = New System.Drawing.Size(150, 20)
+        Me.ctEstadoCivil.TabIndex = 32
         '
         'Label9
         '
@@ -239,19 +240,29 @@ Partial Class AgregarUsuario
         '
         'FechaNac
         '
+        Me.FechaNac.CustomFormat = "yyyy-MM-dd"
+        Me.FechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.FechaNac.Location = New System.Drawing.Point(195, 98)
         Me.FechaNac.Name = "FechaNac"
         Me.FechaNac.Size = New System.Drawing.Size(146, 20)
         Me.FechaNac.TabIndex = 35
         '
-        'ComboBoxSexo
+        'ctCod_ident
         '
-        Me.ComboBoxSexo.FormattingEnabled = True
-        Me.ComboBoxSexo.Items.AddRange(New Object() {"M", "F"})
-        Me.ComboBoxSexo.Location = New System.Drawing.Point(364, 98)
-        Me.ComboBoxSexo.Name = "ComboBoxSexo"
-        Me.ComboBoxSexo.Size = New System.Drawing.Size(145, 21)
-        Me.ComboBoxSexo.TabIndex = 36
+        Me.ctCod_ident.Location = New System.Drawing.Point(364, 155)
+        Me.ctCod_ident.Name = "ctCod_ident"
+        Me.ctCod_ident.Size = New System.Drawing.Size(150, 20)
+        Me.ctCod_ident.TabIndex = 37
+        Me.ctCod_ident.Visible = False
+        '
+        'cbSexo
+        '
+        Me.cbSexo.FormattingEnabled = True
+        Me.cbSexo.Items.AddRange(New Object() {"M", "F"})
+        Me.cbSexo.Location = New System.Drawing.Point(364, 97)
+        Me.cbSexo.Name = "cbSexo"
+        Me.cbSexo.Size = New System.Drawing.Size(121, 21)
+        Me.cbSexo.TabIndex = 38
         '
         'AgregarUsuario
         '
@@ -260,25 +271,26 @@ Partial Class AgregarUsuario
         Me.BackgroundImage = Global.Biblioteca.My.Resources.Resources.Grade_Grey
         Me.ClientSize = New System.Drawing.Size(531, 582)
         Me.ControlBox = False
-        Me.Controls.Add(Me.ComboBoxSexo)
+        Me.Controls.Add(Me.cbSexo)
+        Me.Controls.Add(Me.ctCod_ident)
         Me.Controls.Add(Me.FechaNac)
-        Me.Controls.Add(Me.TextBoxCentroEstudio)
+        Me.Controls.Add(Me.ctCentroEstudio)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBoxEstadoCivil)
+        Me.Controls.Add(Me.ctEstadoCivil)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBoxDir)
+        Me.Controls.Add(Me.ctDir)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBoxTel)
+        Me.Controls.Add(Me.ctTel)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBoxApellidos)
+        Me.Controls.Add(Me.ctApellidos)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DataGridUsuarios)
         Me.Controls.Add(Me.TextBoxEmpty)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ButtonSalir)
-        Me.Controls.Add(Me.TextBoxNombres)
+        Me.Controls.Add(Me.ctNombres)
         Me.Controls.Add(Me.Label1)
         Me.Name = "AgregarUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -297,20 +309,21 @@ Partial Class AgregarUsuario
     Friend WithEvents ButtonGuardar As Button
     Friend WithEvents ButtonBorrar As Button
     Friend WithEvents ButtonSalir As Button
-    Friend WithEvents TextBoxNombres As TextBox
+    Friend WithEvents ctNombres As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBoxApellidos As TextBox
+    Friend WithEvents ctApellidos As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBoxTel As TextBox
+    Friend WithEvents ctTel As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBoxDir As TextBox
+    Friend WithEvents ctDir As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBoxCentroEstudio As TextBox
+    Friend WithEvents ctCentroEstudio As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBoxEstadoCivil As TextBox
+    Friend WithEvents ctEstadoCivil As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents FechaNac As DateTimePicker
-    Friend WithEvents ComboBoxSexo As ComboBox
+    Friend WithEvents ctCod_ident As TextBox
+    Friend WithEvents cbSexo As ComboBox
 End Class
