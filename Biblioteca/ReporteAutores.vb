@@ -15,4 +15,8 @@
     Private Sub ButtonSalir_Click(sender As Object, e As EventArgs) Handles ButtonSalir.Click
         Me.Close()
     End Sub
+
+    Private Sub ButtonExport_Click(sender As Object, e As EventArgs) Handles ButtonExport.Click
+        GridAExcel(DataGridAutores)
+    End Sub
 End Class

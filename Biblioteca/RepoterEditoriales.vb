@@ -18,4 +18,7 @@
         Me.DataGridEditoriales.DataSource = conexion.ds.Tables(0)
     End Sub
 
+    Private Sub ButtonExport_Click(sender As Object, e As EventArgs) Handles ButtonExport.Click
+        GridAExcel(DataGridEditoriales)
+    End Sub
 End Class
