@@ -27,6 +27,7 @@ Partial Class Main
         Me.AutorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LibrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CatalogoAutorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CatalogoEditorialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,7 +37,6 @@ Partial Class Main
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,20 +59,26 @@ Partial Class Main
         'AutorToolStripMenuItem
         '
         Me.AutorToolStripMenuItem.Name = "AutorToolStripMenuItem"
-        Me.AutorToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AutorToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.AutorToolStripMenuItem.Text = "Autores"
         '
         'LibrosToolStripMenuItem
         '
         Me.LibrosToolStripMenuItem.Name = "LibrosToolStripMenuItem"
-        Me.LibrosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LibrosToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.LibrosToolStripMenuItem.Text = "Libros"
         '
         'EditorialToolStripMenuItem
         '
         Me.EditorialToolStripMenuItem.Name = "EditorialToolStripMenuItem"
-        Me.EditorialToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EditorialToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.EditorialToolStripMenuItem.Text = "Editoriales"
+        '
+        'UsuariosToolStripMenuItem
+        '
+        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'ReportesToolStripMenuItem
         '
@@ -151,12 +157,6 @@ Partial Class Main
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "UNAN - León"
         '
-        'UsuariosToolStripMenuItem
-        '
-        Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.UsuariosToolStripMenuItem.Text = "Usuarios"
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -174,6 +174,7 @@ Partial Class Main
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Biblioteca - Inicio"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

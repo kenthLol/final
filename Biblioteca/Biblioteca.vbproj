@@ -111,6 +111,7 @@
     <Compile Include="Editorial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Exportar.vb" />
     <Compile Include="LeerLibros.Designer.vb">
       <DependentUpon>LeerLibros.vb</DependentUpon>
     </Compile>

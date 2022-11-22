@@ -57,6 +57,7 @@ Partial Class Presentacion
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Presentacion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Presentacion"
         Me.ResumeLayout(False)
         Me.PerformLayout()
