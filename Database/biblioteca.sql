@@ -1,4 +1,4 @@
-drop database biblioteca;
+drop database if exists biblioteca;
 create database biblioteca;
 use biblioteca;
 
@@ -108,6 +108,7 @@ create table prestamo(
 /* Procedimientos para Autor */
 
 delimiter //
+DROP PROCEDURE if exists insertar_autor //
 create procedure insertar_autor(in codigo bigint(20),in nombre varchar(50), in 
 	pais bigint(20))
 	begin
@@ -119,6 +120,7 @@ create procedure insertar_autor(in codigo bigint(20),in nombre varchar(50), in
 		end if;
 end //
 
+DROP PROCEDURE if exists seleccionar_autores //
 create procedure seleccionar_autores()
 begin
 	select a.cod_autor as Codigo, a.nombre_autor as Autor, b.nombre_pais as Pais 
@@ -126,16 +128,19 @@ begin
 	a.nombre_autor;
 end //
 
+DROP PROCEDURE if exists seleccionar_paises //
 create procedure seleccionar_paises()
 begin
 	select * from pais order by nombre_pais;
 end //
 
+DROP PROCEDURE if exists ver_autor //
 create procedure ver_autor(in autor bigint(20))
 begin
 	select * from autor where cod_autor=autor;
 end//
 
+DROP PROCEDURE if exists borrar_autor //
 create procedure borrar_autor(in autor bigint(20))
 begin
 	delete from autor where cod_autor=autor ;
@@ -145,6 +150,7 @@ Delimiter ;
 /* Procedimientos para Editorial */
 
 delimiter //
+DROP PROCEDURE if exists insertar_editorial //
 create procedure insertar_editorial(in codigo bigint(20),in nombre varchar(50), in 
 	pais bigint(20))
 	begin
@@ -156,6 +162,7 @@ create procedure insertar_editorial(in codigo bigint(20),in nombre varchar(50), 
 		end if;
 end //
 
+DROP PROCEDURE if exists seleccionar_editorial //
 create procedure seleccionar_editorial()
 begin
 	select a.cod_editorial as codigo, a.nombre_editorial as Editorial, b.nombre_pais as 
@@ -163,16 +170,19 @@ begin
 	a.nombre_editorial;
 end //
 
+DROP PROCEDURE if exists seleccionar_paises_editorial //
 create procedure seleccionar_paises_editorial()
 begin
 	select * from pais order by nombre_pais;
 end //
 
+DROP PROCEDURE if exists ver_editorial //
 create procedure ver_editorial(in editorial bigint(20))
 begin
 	select * from editorial where cod_editorial = editorial;
 end//
 
+DROP PROCEDURE if exists borrar_editorial //
 create procedure borrar_editorial(in editorial bigint(20))
 begin
 	delete from editorial where cod_editorial = editorial ;
@@ -183,7 +193,7 @@ Delimiter ;
 /* Procedimientos para Libros */
 
 delimiter //
-DROP PROCEDURE insertar_libro //
+DROP PROCEDURE if exists insertar_libro //
 create procedure insertar_libro(in codigo_libro bigint(20), in titulo varchar(50), 
 	in editorial bigint(20), in fecha_public date, in ejemplares int, in n_pag int, 
     in idioma varchar(25), in edicion int, in codigo_autor bigint(20))
@@ -208,7 +218,7 @@ create procedure insertar_libro(in codigo_libro bigint(20), in titulo varchar(50
 		end if;
 end //
 
-DROP PROCEDURE seleccionar_libros//
+DROP PROCEDURE if exists seleccionar_libros//
 create procedure seleccionar_libros()
 begin
     select a.cod_libro as codigo, a.titulo as Titulo, b.nombre_editorial as Editorial,
@@ -219,22 +229,78 @@ begin
     order by a.titulo;
 end //
 
-DROP PROCEDURE ver_libro//
+DROP PROCEDURE if exists seleccionar_editorial_libro//
+create procedure seleccionar_editorial_libro()
+begin
+	select * from editorial order by nombre_editorial;
+end //
+
+DROP PROCEDURE if exists ver_libro//
 create procedure ver_libro(in libro bigint(20))
 begin
 	select * from libro where cod_libro = libro;
 end//
 
-DROP procedure borrar_libro//
+DROP procedure if exists borrar_libro//
 create procedure borrar_libro(in libro bigint(20))
 begin
 	delete from libro where cod_libro = libro ;
 end //
 Delimiter ;
 
+/* Procedimientos para Usuarios */
+DROP PROCEDURE if exists insertar_usuario;
+delimiter //
+create procedure insertar_usuario(in codigo bigint(20), in Nombres varchar(50), 
+	in Apellidos varchar(50), in tel varchar(8), in dir varchar(100), in Fecha_nac date,
+    in sex varchar(1), in Estado_civil varchar(1), in Centro_estudio varchar(50))
+	begin
+		if codigo=0 then
+			insert into usuario values(null, Nombres, Apellidos, tel, dir, Fecha_nac, sex, Estado_civil, Centro_estudio);
+		else
+			update usuario 
+            set nombres = Nombres, 
+				apellidos = Apellidos,
+                telefono = tel,
+                direccion = dir,
+                fecha_nac = Fecha_nac,
+                sexo = sex,
+                estado_civil = Estado_civil,
+                centro_estudio = Centro_estudio
+			where 
+			cod_ident = codigo;
+		end if;
+end //
+
+DROP PROCEDURE if exists seleccionar_usuarios//
+create procedure seleccionar_usuarios()
+begin
+	select cod_ident as Codigo, nombres as Nombres, apellidos as Apellidos, telefono as Teléfono, direccion as Dirección, 
+		   fecha_nac as 'Fecha Nac', sexo as Sexo, estado_civil as 'Estado civ', centro_estudio as 'Centro Estudio' 
+	from usuario 
+	order by 
+	nombres;
+end //
+
+DROP PROCEDURE if exists ver_usuario//
+create procedure ver_usuario(in codigo_usuario bigint(20))
+begin
+	select * from usuario where cod_ident = codigo_usuario;
+end//
+
+DROP PROCEDURE if exists borrar_usuario//
+create procedure borrar_usuario(in codigo_usuario bigint(20))
+begin
+	delete from usuario where cod_ident = codigo_usuario;
+end //
+Delimiter ;
+
+call insertar_usuario(1, 'Kenneth Samuel', 'Lola Pichardo', '76342467', 'No se', '2001-01-08', 'M', 'S', 'Guillermo');
+call seleccionar_usuarios();
+
 -- --------------- LOGIN ---------------------------------------
 delimiter //
-drop procedure consultar_login//
+drop procedure if exists consultar_login//
 create procedure consultar_login(in pusuario varchar(20),in pclave varchar(100))
 begin
 	select * from login where usuario=pusuario and clave=md5(pclave);
@@ -245,7 +311,7 @@ DELIMITER ;
 /*  Libros por pais */
 
 Delimiter //
-DROP PROCEDURE libros_por_pais//
+DROP PROCEDURE if exists libros_por_pais//
 CREATE PROCEDURE libros_por_pais(in country varchar(100))
 begin
 	SELECT l.titulo, e.nombre_editorial, p.nombre_pais from libro l 
@@ -257,7 +323,7 @@ DELIMITER ;
 
 /* Préstamos realizados en un rango de fecha  */
 Delimiter //
-DROP PROCEDURE cantidad_prestamos//
+DROP PROCEDURE if exists cantidad_prestamos//
 CREATE PROCEDURE cantidad_prestamos(in primera_fecha date, in segunda_fecha date)
 begin	
 	SELECT COUNT(*) as 'Prestamos' FROM prestamo
@@ -268,7 +334,7 @@ DELIMITER ;
 
 /* Préstamos vencidos  */
 Delimiter //
-DROP PROCEDURE prestamos_vencidos//
+DROP PROCEDURE if exists prestamos_vencidos//
 CREATE PROCEDURE prestamos_vencidos()
 begin	
 	SELECT l.cod_libro as Codigo, l.titulo as Titulo, p.fecha_ent as 'Fecha Entrega', 
@@ -281,7 +347,7 @@ DELIMITER ;
 
 /* Usuarios con multa  */
 Delimiter //
-DROP PROCEDURE usuarios_con_multa//
+DROP PROCEDURE if exists usuarios_con_multa//
 CREATE PROCEDURE usuarios_con_multa()
 begin	
 	SELECT u.nombres as Nombres, u.apellidos as Apellidos, u.centro_estudio as 'Centro estudio',
