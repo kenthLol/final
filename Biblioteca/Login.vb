@@ -36,6 +36,7 @@ Public Class Login
     End Sub
 
     Private Sub ButtonConsultar_Click(sender As Object, e As EventArgs) Handles ButtonConsultar.Click
+        Me.Close()
         LeerLibros.ShowDialog()
     End Sub
 End Class
