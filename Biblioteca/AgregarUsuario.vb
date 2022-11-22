@@ -77,4 +77,86 @@
 
         conexion.lector.Close()
     End Sub
+
+    Private Sub ButtonGuardar_Click(sender As Object, e As EventArgs) Handles ButtonGuardar.Click
+        Dim sql, rot As String
+        Dim res As Boolean
+        Dim codigo As Integer
+
+        If Me.TextBoxNombres.Text = "" Then
+            MessageBox.Show("Nombres vacíos", "Error")
+            Me.TextBoxNombres.Focus()
+            Exit Sub
+        End If
+
+        If Me.TextBoxApellidos.Text = "" Then
+            MessageBox.Show("Apellidos vacíos", "Error")
+            Me.TextBoxApellidos.Focus()
+            Exit Sub
+        End If
+
+        If Me.TextBoxTel.Text = "" Then
+            MessageBox.Show("Teléfono está vacío", "Error")
+            Me.TextBoxTel.Focus()
+            Exit Sub
+        End If
+
+        If Me.TextBoxDir.Text = "" Then
+            MessageBox.Show("Dirección vacía", "Error")
+            Me.TextBoxDir.Focus()
+            Exit Sub
+        End If
+
+        If Me.ComboBoxSexo.SelectedIndex = -1 Then
+            MessageBox.Show("Seleccionar sexo", "Error")
+            Me.ComboBoxSexo.Focus()
+            Exit Sub
+        End If
+
+        If Me.TextBoxEstadoCivil.Text = "" Then
+            MessageBox.Show("Estado civil está vacío", "Error")
+            Me.TextBoxEstadoCivil.Focus()
+            Exit Sub
+        End If
+
+        If Me.TextBoxCentroEstudio.Text = "" Then
+            MessageBox.Show("Centro de estudio vacío", "Error")
+            Me.TextBoxCentroEstudio.Focus()
+            Exit Sub
+        End If
+
+        If MessageBox.Show("¿Desea guardar este usuario?", "Sistema de Biblioteca ", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+        MessageBoxDefaultButton.Button1) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        If Me.TextBoxEmpty.Text = "" Then
+            Me.TextBoxEmpty.Text = 0
+        End If
+
+        sql = "call ver_autor(" + Me.TextBoxEmpty.Text + ")"
+        conexion.fila(sql)
+
+        If conexion.lector.HasRows Then
+            rot = "Actualizado"
+            codigo = Me.TextBoxEmpty.Text
+        Else
+            rot = "Guardado"
+            codigo = Me.TextBoxEmpty.Text
+        End If
+
+        conexion.lector.Close()
+
+        sql = "call insertar_autor(" & codigo & ",'" & Me.TextBoxNombres.Text & "'," & "Nicaragua" & ")"
+        res = conexion.ejecutar(sql)
+
+        If res Then
+            MessageBox.Show("Registro " & rot)
+        Else
+            MessageBox.Show("Error en el proceso de " & rot)
+        End If
+
+        ButtonNuevo_Click(Nothing, Nothing)
+        RenderData()
+    End Sub
 End Class
